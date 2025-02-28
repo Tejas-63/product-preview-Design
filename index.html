@@ -1,9 +1,58 @@
 <!DOCTYPE html>
 <html >
 <head>
-    <title>product-design</title>
+    <title>product-design</title> 
+    <style>
+#main-product-image{
+    width: 400px;
+    height:400px ;
+object-fit: cover;
+border: 1px solid black;
+border-radius: 20px;
+box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+display:block ;
+margin: 20px auto;
+}
+.product-images-container{
+    display: flex;
+    justify-content: center;
+}
+.product-image{
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 10px ;
+    cursor: pointer;
+}
+</style>
 </head>
 <body>
-    <h1>view</h1>
+    <img src="./img/one.jpg"  id="main-product-image"/>
+
+    <div class="product-images-container">
+<img src="./img/one.jpg" class="product-image" onclick="ChangeImage(1)"/>
+<img src="./img/two.jpg" class="product-image" onclick="ChangeImage(2)"/>
+<img src="./img/three.jpg" class="product-image" onclick="ChangeImage(3)"/>
+<img src="./img/four.jpg" class="product-image" onclick="ChangeImage(4)"/>
+<img src="./img/five.jpg" class="product-image" onclick="ChangeImage(5)"/>
+<img src="./img/six.jpg" class="product-image" onclick="ChangeImage(6)"/>
+
+
+    </div>
+    <script>
+        function ChangeImage(num){
+          const mainImage =document.getElementById('main-product-image');
+        
+        if(num==1){
+            mainImage.src="main.jpg";
+        }
+        else if (num==2){
+            mainImage.src="one.jpg";
+        }
+       
+    }
+    </script>
 </body>
 </html>
